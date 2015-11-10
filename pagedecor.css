@@ -1,0 +1,47 @@
+.jumbotron.custom {
+    background-color: white;
+    max-height: 20%;
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+    border-bottom-color: black;
+    padding: 0%;
+}
+.logo{
+    width: 180px;
+    height: 70px;
+    float: left;
+    padding-left: 1%;
+}
+.header_text{
+    float: left;
+}
+.intro{
+    padding-top: 0%;
+    margin: 0%;
+}
+.span12{
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+    border-bottom-color: black;
+    margin-bottom: 1%;
+}
+form{
+    padding-left: 1%;
+
+
+}
+.span5{
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+    border-bottom-color: black;
+    margin-bottom: 1%;
+    width: 30%;
+}
+.table.custom {
+    width: 90%;
+    margin-left: 5%;
+}
+.table.custom2 {
+    width: 50%;
+    margin-left: 5%;
+}

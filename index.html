@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>HRZ - TU Darmstadt</title>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link href="pagedecor.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="container">    <!--Main Container-->
+    <div class="row ">  <!--Header Section-->
+        <div class="jumbotron custom col-lg-12 col-md-12">
+            <div class="logo"><img src="images/hrz_logo.jpg"></div>
+            <div class="header_text">
+                <h2>Technische Universität Darmstadt</h2>
+            </div>
+        </div>
+    </div> <!--End of Header Section-->
+    <div class="row"> <!--Body-->
+        <div class="intro col-md-12 col-lg-12">
+            <h3>Project Proposal, Computing time on the Lichtenberg Hochleistungsrechner</h3>
+            <ul style="list-style-type: square">
+                <li>For <b>small(test) accounts:</b> fill in this proposal (you do not need to upload a detailed proposal). Use the comment field (see 4.4) later on to tell us that you only apply for a test account.</li>
+                <li>Before you submit a new Proposal please fill in at least the project title, section 1.1 (Director), section 1.2 (Principal Investigator), section 1.3 (Manager) and 3.2 (Typical Single Run). Usually projects are required to also fill section 2.1 (Abstract) and section 3.7 (Software).</li>
+            </ul>
+            <div class="span12"></div>
+        </div>
+        <form role="form" class="form-horizontal" action="formserve.php" method="post">
+
+            <h3>1.Administrative Details</h3>
+            <div class="span5"></div>
+            <div class="form-group">
+                <label class="control-label col-sm-3">Project Title:</label>
+                <div class="col-sm-3">
+                    <input type="text" class="form-control input-sm" name="proj_title" placeholder="Enter Project Title">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-3">Proposing Institution(s):</label>
+                <div class="col-sm-3">
+                    <input type="text" class="form-control input-sm" name="prop_inst" placeholder="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-3">Federal state of the Proposing Institution:</label>
+                <div class="col-sm-3">
+                    <select class="form-control" name="prop_state">
+                        <option>-- Please select--</option><option value="Baden-Württemberg">Baden-Württemberg</option>
+                        <option value="Bayern">Bayern</option> <option value="Berlin">Berlin</option>
+                        <option value="Brandenburg">Brandenburg</option> <option value="Bremen">Bremen</option>
+                        <option value="Hamburg">Hamburg</option> <option value="Hessen">Hessen</option>
+                        <option value="Mecklenburg-Vorpommern">Mecklenburg-Vorpommern</option> <option value="Niedersachsen">Niedersachsen</option>
+                        <option value="Nordrhein-Westfalen">Nordrhein-Westfalen</option> <option value="Rheinland-Pfalz ">Rheinland-Pfalz</option>
+                        <option value="Saarland">Saarland</option> <option value="Sachsen">Sachsen</option> <option value="Sachsen-Anhalt">Sachsen-Anhalt</option>
+                        <option value="Schleswig-Holstein">Schleswig-Holstein</option> <option value="Thüringen ">Thüringen</option> <option value="Other">Other</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-3" >If not in the list, Please specify:</label>
+                <div class="col-sm-3">
+                    <input type="text" class="form-control input-sm" name="prop_state_other" placeholder="">
+                </div>
+            </div>
+            <h4>1.1 Director of the Institution</h4>
+            <div class="span5"></div>
+            <div class="form-group">
+                <label class="control-label col-sm-3">Title:</label>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control input-sm" name="dir_title" placeholder="">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="control-label col-sm-3" >Last Name:</label>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control input-sm" name="dir_lname" placeholder="">
+                </div>
+                <label class="control-label col-sm-2"  >First Name:</label>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control input-sm" name="dir_fname" placeholder="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-3">Street:</label>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control input-sm" name="dir_street" placeholder="">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="control-label col-sm-3">Postal code:</label>
+                <div class="col-sm-2">
+                    <input type="number" class="form-control input-sm" name="dir_pcode" placeholder="">
+                </div>
+                <label class="control-label col-sm-2">City:</label>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control input-sm" name="dir_city" placeholder="">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="control-label col-sm-3">Phone:</label>
+                <div class="col-sm-2">
+                    <input type="number" class="form-control input-sm" name="dir_phone" placeholder="">
+                </div>
+                <label class="control-label col-sm-2">Fax:</label>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control input-sm" name="dir_fax" placeholder="">
+                </div>
+            </div>
+            <h4>1.2 Principal Investigator(If it is not the director)</h4>
+            <div class="span5"></div>
+            <div class="form-group">
+                <label class="control-label col-sm-3">Title:</label>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control input-sm" name="pi_title" placeholder="">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="control-label col-sm-3" >Last Name:</label>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control input-sm" name="pi_lname" placeholder="">
+                </div>
+                <label class="control-label col-sm-2"  >First Name:</label>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control input-sm" name="pi_fname" placeholder="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-3">Street:</label>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control input-sm" name="pi_street" placeholder="">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="control-label col-sm-3">Postal code:</label>
+                <div class="col-sm-2">
+                    <input type="number" class="form-control input-sm" name="pi_pcode" placeholder="">
+                </div>
+                <label class="control-label col-sm-2">City:</label>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control input-sm" name="pi_city" placeholder="">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="control-label col-sm-3">Phone:</label>
+                <div class="col-sm-2">
+                    <input type="number" class="form-control input-sm" name="pi_phone" placeholder="">
+                </div>
+                <label class="control-label col-sm-2">Fax:</label>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control input-sm" name="pi_fax" placeholder="">
+                </div>
+            </div>
+            <h4>1.3 Project Manager/Main researcher</h4>
+            <div class="span5"></div>
+            <p>The project manager is responsible for the administrative tasks of the project, e.g. distribution und supervision of the granted logins and resources.</p>
+            <div class="form-group">
+                <label class="control-label col-sm-3">Title:</label>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control input-sm" name="pm_title" placeholder="">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="control-label col-sm-3">Last Name:</label>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control input-sm" name="pm_lname" placeholder="">
+                </div>
+                <label class="control-label col-sm-2">First Name:</label>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control input-sm" name="pm_fname" placeholder="">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="control-label col-sm-3">Street:</label>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control input-sm" name="pm_street" placeholder="">
+                </div>
+                <label class="control-label col-sm-2">Postal Code:</label>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control input-sm" name="pm_pcode" placeholder="">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="control-label col-sm-3">City:</label>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control input-sm" name="pm_city" placeholder="">
+                </div>
+                <label class="control-label col-sm-2">Phone:</label>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control input-sm" name="pm_phone" placeholder="">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="control-label col-sm-3">Fax:</label>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control input-sm" name="pm_fax" placeholder="">
+                </div>
+                <label class="control-label col-sm-2">Email:</label>
+                <div class="col-sm-2">
+                    <input type="email" class="form-control input-sm" name="pm_email" placeholder="">
+                </div>
+            </div>
+            <h4>1.4 Researchers</h4>
+            <div class="span5"></div>
+            <p>Please list all persons who need access. List the director (sec. 1.1), the principal investigator (sec 1.2), the manager (sec. 1.3), and the researchers (sec. 1.4) if and only if they need an account. All "researchers" will be added to the mailing list hpc-nutzer@lists.tu-darmstadt.de.Please give your professional e-mail address. E-mail addresses such as Gmail and Hotmail are not accepted</p>
+            <div class="form-group">
+                <div class="table-responsive">
+                    <table class="table custom">
+                        <thead>
+                        <tr>
+                            <th>1</th>
+                            <th class="col-md-1">Title</th>
+                            <th class="col-md-3">Last name</th>
+                            <th class="col-md-3">First name</th>
+                            <th class="col-md-2">Phone</th>
+                            <th class="col-md-3">Email</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td ></td>
+                            <td ><input type="text" class="form-control input-sm" name="res1_title" placeholder="Title"></td>
+                            <td ><input type="text" class="form-control input-sm" name="res1_lname" placeholder="Enter your lastname"></td>
+                            <td ><input type="text" class="form-control input-sm" name="res1_fname" placeholder="Enter your firstname"></td>
+                            <td ><input type="number" class="form-control input-sm" name="res1_phone" placeholder="Enter your phone number"></td>
+                            <td ><input type="email" class="form-control input-sm" name="res1_email" placeholder="Enter your email address"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+            <div class="form-group row">
+
+                <label class="control-label col-sm-2">Gender</label>
+                <div class="col-sm-2">
+                    <select class="form-control" name="res1_gender">
+                        <option>--Please select--</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+                <label class="control-label col-sm-2">Nationality(required)</label>
+                <div class="col-sm-2">
+                    <select class="form-control" name="res1_nat">
+                        <option value="">-- please select --</option><option value="------------">------------</option><option value="Germany">Germany</option>
+                        <option value="------------">------------</option><option value="Albania">Albania</option><option value="Armenia">Armenia</option><option value="Austria">Austria</option>
+                        <option value="Azerbaijan">Azerbaijan</option><option value="Belarus">Belarus</option><option value="Belgium">Belgium</option><option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                        <option value="Bulgaria">Bulgaria</option><option value="Croatia">Croatia</option><option value="Cyprus">Cyprus</option><option value="Czech Republic">Czech Republic</option><option value="Denmark">Denmark</option>
+                        <option value="Estonia">Estonia</option><option value="Finland">Finland</option><option value="France">France</option><option value="Georgia">Georgia</option><option value="Greece">Greece</option>
+                        <option value="Hungary">Hungary</option><option value="Iceland">Iceland</option><option value="Ireland">Ireland</option><option value="Italy">Italy</option><option value="Latvia">Latvia</option>
+                        <option value="Lithuania">Lithuania</option><option value="Luxembourg">Luxembourg</option><option value="Macedonia">Macedonia</option><option value="Malta">Malta</option><option value="Moldova">Moldova</option>
+                        <option value="Montenegro">Montenegro</option><option value="Netherlands">Netherlands</option><option value="Netherlands Antilles">Netherlands Antilles</option><option value="Norway">Norway</option>
+                        <option value="Poland">Poland</option><option value="Portugal">Portugal</option><option value="Romania">Romania</option><option value="Russian Federation">Russian Federation</option><option value="Serbia">Serbia</option>
+                        <option value="Slovakia">Slovakia</option><option value="Slovenia">Slovenia</option><option value="Spain">Spain</option><option value="Sweden">Sweden</option><option value="Switzerland">Switzerland</option>
+                        <option value="Turkey">Turkey</option><option value="Ukraine">Ukraine</option><option value="United Kingdom">United Kingdom</option><option value="--------------">--------------</option><option value="Afghanistan">Afghanistan</option>
+                        <option value="Algeria">Algeria</option><option value="American Samoa">American Samoa</option><option value="Andorra">Andorra</option><option value="Angola">Angola</option><option value="Anguilla">Anguilla</option>
+                        <option value="Antarctica (special status by the Antarctic Treaty)">Antarctica (special status by the Antarctic Treaty)</option><option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                        <option value="Argentina">Argentina</option><option value="Aruba">Aruba</option><option value="Australia">Australia</option><option value="Bahamas">Bahamas</option><option value="Bahrain">Bahrain</option>
+                        <option value="Bangladesh">Bangladesh</option><option value="Barbados">Barbados</option><option value="Belize">Belize</option><option value="Benin">Benin</option><option value="Bermuda">Bermuda</option>
+                        <option value="Bhutan">Bhutan</option><option value="Bolivia">Bolivia</option><option value="Botswana">Botswana</option><option value="Bouvet Island">Bouvet Island</option><option value="Brazil">Brazil</option>
+                        <option value="British Indian Ocean">British Indian Ocean</option><option value="British Virgin Islands">British Virgin Islands</option><option value="Brunei Darussalam">Brunei Darussalam</option>
+                        <option value="Burkina Faso">Burkina Faso</option><option value="Burundi">Burundi</option><option value="Cambodia">Cambodia</option><option value="Cameroon">Cameroon</option><option value="Canada">Canada</option>
+                        <option value="Cape Verde">Cape Verde</option><option value="Cayman Islands">Cayman Islands</option><option value="Central African Republic">Central African Republic</option><option value="Chad">Chad</option>
+                        <option value="Chile">Chile</option><option value="China">China</option><option value="Christmas Island">Christmas Island</option><option value="Cocos Islands">Cocos Islands</option><option value="Colombia">Colombia</option>
+                        <option value="Comoros">Comoros</option><option value="Congo, Democratic Republic (former Zaire)">Congo, Democratic Republic (former Zaire)</option><option value="Cook Islands">Cook Islands</option>
+                        <option value="Costa Rica">Costa Rica</option><option value="Cuba">Cuba</option><option value="Djibouti">Djibouti</option><option value="Dominica">Dominica</option><option value="Dominican Republic">Dominican Republic</option>
+                        <option value="Ecuador">Ecuador</option><option value="Egypt">Egypt</option><option value="El Salvador">El Salvador</option><option value="Equatorial Guinea">Equatorial Guinea</option><option value="Eritrea">Eritrea</option>
+                        <option value="Ethiopia">Ethiopia</option><option value="Falkland Islands">Falkland Islands</option><option value="Faroe Islands">Faroe Islands</option><option value="Fiji">Fiji</option><option value="French Guiana">French Guiana</option>
+                        <option value="French Polynesia">French Polynesia</option><option value="French Southern and Antarctic Lands">French Southern and Antarctic Lands</option><option value="Gabon">Gabon</option><option value="Gambia">Gambia</option>
+                        <option value="Ghana">Ghana</option><option value="Gibraltar">Gibraltar</option><option value="Greenland">Greenland</option><option value="Grenada">Grenada</option><option value="Guadeloupe">Guadeloupe</option>
+                        <option value="Guam">Guam</option><option value="Guatemala">Guatemala</option><option value="Guernsey (Channel Island)">Guernsey (Channel Island)</option><option value="Guinea">Guinea</option>
+                        <option value="Guinea-Bissau">Guinea-Bissau</option><option value="Guyana">Guyana</option><option value="Haiti">Haiti</option><option value="Heard Islands and McDonald Islands">Heard Islands and McDonald Islands</option>
+                        <option value="Honduras">Honduras</option><option value="Hong Kong">Hong Kong</option><option value="India">India</option><option value="Indonesia">Indonesia</option>
+                        <option value="Iran, Islamic Republic of Iran">Iran, Islamic Republic of Iran</option><option value="Iraq">Iraq</option><option value="Isle of Man">Isle of Man</option><option value="Israel">Israel</option>
+                        <option value="Ivory Coast">Ivory Coast</option><option value="Jamaica">Jamaica</option><option value="Japan">Japan</option><option value="Jersey (Channel Island)">Jersey (Channel Island)</option>
+                        <option value="Jordan">Jordan</option><option value="Kazakhstan">Kazakhstan</option><option value="Kenya">Kenya</option><option value="Kiribati">Kiribati</option>
+                        <option value="Korea, Democratic People's Republic (North Korea)">Korea, Democratic People's Republic (North Korea)</option><option value="Korea, Republic (South Korea)">Korea, Republic (South Korea)</option>
+                        <option value="Kosovo">Kosovo</option><option value="Kuwait">Kuwait</option><option value="Kyrgyzstan">Kyrgyzstan</option><option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option>
+                        <option value="Lebanon">Lebanon</option><option value="Lesotho">Lesotho</option><option value="Liberia">Liberia</option><option value="Libyan Arab Jamahiriya (Libya)">Libyan Arab Jamahiriya (Libya)</option>
+                        <option value="Liechtenstein">Liechtenstein</option><option value="Macao">Macao</option><option value="Madagascar">Madagascar</option><option value="Malawi">Malawi</option><option value="Malaysia">Malaysia</option>
+                        <option value="Maldives">Maldives</option><option value="Mali">Mali</option><option value="Marshall Islands">Marshall Islands</option><option value="Martinique">Martinique</option><option value="Mauritania">Mauritania</option>
+                        <option value="Mauritius">Mauritius</option><option value="Mayotte">Mayotte</option><option value="Mexico">Mexico</option><option value="Micronesia">Micronesia</option><option value="Monaco">Monaco</option>
+                        <option value="Mongolia">Mongolia</option><option value="Montserrat">Montserrat</option><option value="Morocco">Morocco</option><option value="Mozambique">Mozambique</option><option value="Myanmar">Myanmar</option>
+                        <option value="Namibia">Namibia</option><option value="Nauru">Nauru</option><option value="Nepal">Nepal</option><option value="New Caledonia">New Caledonia</option><option value="New Zealand">New Zealand</option>
+                        <option value="Nicaragua">Nicaragua</option><option value="Niger">Niger</option><option value="Nigeria">Nigeria</option><option value="Niue">Niue</option><option value="Norfolk Island">Norfolk Island</option>
+                        <option value="Northern Marianas">Northern Marianas</option><option value="Oman">Oman</option><option value="Pakistan">Pakistan</option><option value="Palau">Palau</option>
+                        <option value="Palestinian Territory">Palestinian Territory</option><option value="Panama">Panama</option><option value="Papua New Guinea">Papua New Guinea</option><option value="Paraguay">Paraguay</option>
+                        <option value="Peru">Peru</option><option value="Philippines">Philippines</option><option value="Pitcairn Islands">Pitcairn Islands</option><option value="Puerto Rico">Puerto Rico</option><option value="Qatar">Qatar</option>
+                        <option value="Republic of the Congo">Republic of the Congo</option><option value="Réunion">Réunion</option><option value="Rwanda">Rwanda</option><option value="Saint-Barthélemy">Saint-Barthélemy</option>
+                        <option value="Saint-Martin">Saint-Martin</option><option value="Saint-Pierre and Miquelon">Saint-Pierre and Miquelon</option><option value="Samoa">Samoa</option><option value="San Marino">San Marino</option>
+                        <option value="São Tomé and Príncipe">São Tomé and Príncipe</option><option value="Saudi Arabia">Saudi Arabia</option><option value="Senegal">Senegal</option><option value="Seychelles">Seychelles</option>
+                        <option value="Sierra Leone">Sierra Leone</option><option value="Singapore">Singapore</option><option value="Solomon Islands">Solomon Islands</option><option value="Somalia">Somalia</option>
+                        <option value="South Africa">South Africa</option><option value="South Georgia and the South Sandwich Islands">South Georgia and the South Sandwich Islands</option><option value="Sri Lanka">Sri Lanka</option>
+                        <option value="St. Helena">St. Helena</option><option value="St. Kitts and Nevis">St. Kitts and Nevis</option><option value="St. Lucia">St. Lucia</option><option value="St. Vincent and the Grenadines">St. Vincent and the Grenadines</option>
+                        <option value="Sudan">Sudan</option><option value="Suriname">Suriname</option><option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option><option value="Swaziland">Swaziland</option>
+                        <option value="Syrian, Arab Republic">Syrian, Arab Republic</option><option value="Taiwan">Taiwan</option><option value="Tajikistan">Tajikistan</option><option value="Tanzania, United Republic">Tanzania, United Republic</option>
+                        <option value="Thailand">Thailand</option><option value="Timor-Leste">Timor-Leste</option><option value="Togo">Togo</option><option value="Tokelau">Tokelau</option><option value="Tonga">Tonga</option>
+                        <option value="Trinidad and Tobago">Trinidad and Tobago</option><option value="Tunisia">Tunisia</option><option value="Turkmenistan">Turkmenistan</option><option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+                        <option value="Tuvalu">Tuvalu</option><option value="Uganda">Uganda</option><option value="United Arab Emirates">United Arab Emirates</option><option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
+                        <option value="United States of America">United States of America</option><option value="United States Virgin Islands">United States Virgin Islands</option><option value="Uruguay">Uruguay</option>
+                        <option value="Uzbekistan">Uzbekistan</option><option value="Vanuatu">Vanuatu</option><option value="Vatican City">Vatican City</option><option value="Venezuela">Venezuela</option><option value="Vietnam">Vietnam</option>
+                        <option value="Wallis and Futuna">Wallis and Futuna</option><option value="Western Sahara">Western Sahara</option><option value="Yemen">Yemen</option><option value="Zambia">Zambia</option><option value="Zimbabwe">Zimbabwe</option>
+                    </select>
+                </div>
+                <label class="control-label col-sm-1" >TU-ID</label>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control input-sm" name="res1_tuid" placeholder="Enter your TU-ID">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="control-label col-sm-6"> If you want to use certificates for login, enter the distinguished name of the researcher here</label>
+                <div class="col-sm-3">
+                    <input type="text" class="form-control input-sm" name="res1_cert" placeholder="-- If you want to use certificates for login, enter the distinguished name of the researcher here --">
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" name="res1_lichtacc"> Lichtenberg Account exits?</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="table-responsive">
+                    <table class="table custom">
+                        <thead>
+                        <tr>
+                            <th>2</th>
+                            <th class="col-md-1">Title</th>
+                            <th class="col-md-3">Last name</th>
+                            <th class="col-md-3">First name</th>
+                            <th class="col-md-2">Phone</th>
+                            <th class="col-md-3">Email</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td ></td>
+                            <td ><input type="text" class="form-control input-sm" name="res2_title" placeholder="Title"></td>
+                            <td ><input type="text" class="form-control input-sm" name="res2_lname" placeholder="Enter your lastname"></td>
+                            <td ><input type="text" class="form-control input-sm" name="res2_fname" placeholder="Enter your firstname"></td>
+                            <td ><input type="number" class="form-control input-sm" name="res2_phone" placeholder="Enter your phone number"></td>
+                            <td ><input type="email" class="form-control input-sm" name="res2_email" placeholder="Enter your email address"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="control-label col-sm-2">Gender</label>
+                <div class="col-sm-2">
+                    <select class="form-control" name="res2_gender">
+                        <option>--Please select --</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+
+                </div>
+                <label class="control-label col-sm-2">Nationality(required)</label>
+                <div class="col-sm-2">
+                    <select class="form-control" name="res2_nat">
+                        <option value="">-- please select --</option><option value="------------">------------</option><option value="Germany">Germany</option>
+                        <option value="------------">------------</option><option value="Albania">Albania</option><option value="Armenia">Armenia</option><option value="Austria">Austria</option>
+                        <option value="Azerbaijan">Azerbaijan</option><option value="Belarus">Belarus</option><option value="Belgium">Belgium</option><option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                        <option value="Bulgaria">Bulgaria</option><option value="Croatia">Croatia</option><option value="Cyprus">Cyprus</option><option value="Czech Republic">Czech Republic</option><option value="Denmark">Denmark</option>
+                        <option value="Estonia">Estonia</option><option value="Finland">Finland</option><option value="France">France</option><option value="Georgia">Georgia</option><option value="Greece">Greece</option>
+                        <option value="Hungary">Hungary</option><option value="Iceland">Iceland</option><option value="Ireland">Ireland</option><option value="Italy">Italy</option><option value="Latvia">Latvia</option>
+                        <option value="Lithuania">Lithuania</option><option value="Luxembourg">Luxembourg</option><option value="Macedonia">Macedonia</option><option value="Malta">Malta</option><option value="Moldova">Moldova</option>
+                        <option value="Montenegro">Montenegro</option><option value="Netherlands">Netherlands</option><option value="Netherlands Antilles">Netherlands Antilles</option><option value="Norway">Norway</option>
+                        <option value="Poland">Poland</option><option value="Portugal">Portugal</option><option value="Romania">Romania</option><option value="Russian Federation">Russian Federation</option><option value="Serbia">Serbia</option>
+                        <option value="Slovakia">Slovakia</option><option value="Slovenia">Slovenia</option><option value="Spain">Spain</option><option value="Sweden">Sweden</option><option value="Switzerland">Switzerland</option>
+                        <option value="Turkey">Turkey</option><option value="Ukraine">Ukraine</option><option value="United Kingdom">United Kingdom</option><option value="--------------">--------------</option><option value="Afghanistan">Afghanistan</option>
+                        <option value="Algeria">Algeria</option><option value="American Samoa">American Samoa</option><option value="Andorra">Andorra</option><option value="Angola">Angola</option><option value="Anguilla">Anguilla</option>
+                        <option value="Antarctica (special status by the Antarctic Treaty)">Antarctica (special status by the Antarctic Treaty)</option><option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                        <option value="Argentina">Argentina</option><option value="Aruba">Aruba</option><option value="Australia">Australia</option><option value="Bahamas">Bahamas</option><option value="Bahrain">Bahrain</option>
+                        <option value="Bangladesh">Bangladesh</option><option value="Barbados">Barbados</option><option value="Belize">Belize</option><option value="Benin">Benin</option><option value="Bermuda">Bermuda</option>
+                        <option value="Bhutan">Bhutan</option><option value="Bolivia">Bolivia</option><option value="Botswana">Botswana</option><option value="Bouvet Island">Bouvet Island</option><option value="Brazil">Brazil</option>
+                        <option value="British Indian Ocean">British Indian Ocean</option><option value="British Virgin Islands">British Virgin Islands</option><option value="Brunei Darussalam">Brunei Darussalam</option>
+                        <option value="Burkina Faso">Burkina Faso</option><option value="Burundi">Burundi</option><option value="Cambodia">Cambodia</option><option value="Cameroon">Cameroon</option><option value="Canada">Canada</option>
+                        <option value="Cape Verde">Cape Verde</option><option value="Cayman Islands">Cayman Islands</option><option value="Central African Republic">Central African Republic</option><option value="Chad">Chad</option>
+                        <option value="Chile">Chile</option><option value="China">China</option><option value="Christmas Island">Christmas Island</option><option value="Cocos Islands">Cocos Islands</option><option value="Colombia">Colombia</option>
+                        <option value="Comoros">Comoros</option><option value="Congo, Democratic Republic (former Zaire)">Congo, Democratic Republic (former Zaire)</option><option value="Cook Islands">Cook Islands</option>
+                        <option value="Costa Rica">Costa Rica</option><option value="Cuba">Cuba</option><option value="Djibouti">Djibouti</option><option value="Dominica">Dominica</option><option value="Dominican Republic">Dominican Republic</option>
+                        <option value="Ecuador">Ecuador</option><option value="Egypt">Egypt</option><option value="El Salvador">El Salvador</option><option value="Equatorial Guinea">Equatorial Guinea</option><option value="Eritrea">Eritrea</option>
+                        <option value="Ethiopia">Ethiopia</option><option value="Falkland Islands">Falkland Islands</option><option value="Faroe Islands">Faroe Islands</option><option value="Fiji">Fiji</option><option value="French Guiana">French Guiana</option>
+                        <option value="French Polynesia">French Polynesia</option><option value="French Southern and Antarctic Lands">French Southern and Antarctic Lands</option><option value="Gabon">Gabon</option><option value="Gambia">Gambia</option>
+                        <option value="Ghana">Ghana</option><option value="Gibraltar">Gibraltar</option><option value="Greenland">Greenland</option><option value="Grenada">Grenada</option><option value="Guadeloupe">Guadeloupe</option>
+                        <option value="Guam">Guam</option><option value="Guatemala">Guatemala</option><option value="Guernsey (Channel Island)">Guernsey (Channel Island)</option><option value="Guinea">Guinea</option>
+                        <option value="Guinea-Bissau">Guinea-Bissau</option><option value="Guyana">Guyana</option><option value="Haiti">Haiti</option><option value="Heard Islands and McDonald Islands">Heard Islands and McDonald Islands</option>
+                        <option value="Honduras">Honduras</option><option value="Hong Kong">Hong Kong</option><option value="India">India</option><option value="Indonesia">Indonesia</option>
+                        <option value="Iran, Islamic Republic of Iran">Iran, Islamic Republic of Iran</option><option value="Iraq">Iraq</option><option value="Isle of Man">Isle of Man</option><option value="Israel">Israel</option>
+                        <option value="Ivory Coast">Ivory Coast</option><option value="Jamaica">Jamaica</option><option value="Japan">Japan</option><option value="Jersey (Channel Island)">Jersey (Channel Island)</option>
+                        <option value="Jordan">Jordan</option><option value="Kazakhstan">Kazakhstan</option><option value="Kenya">Kenya</option><option value="Kiribati">Kiribati</option>
+                        <option value="Korea, Democratic People's Republic (North Korea)">Korea, Democratic People's Republic (North Korea)</option><option value="Korea, Republic (South Korea)">Korea, Republic (South Korea)</option>
+                        <option value="Kosovo">Kosovo</option><option value="Kuwait">Kuwait</option><option value="Kyrgyzstan">Kyrgyzstan</option><option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option>
+                        <option value="Lebanon">Lebanon</option><option value="Lesotho">Lesotho</option><option value="Liberia">Liberia</option><option value="Libyan Arab Jamahiriya (Libya)">Libyan Arab Jamahiriya (Libya)</option>
+                        <option value="Liechtenstein">Liechtenstein</option><option value="Macao">Macao</option><option value="Madagascar">Madagascar</option><option value="Malawi">Malawi</option><option value="Malaysia">Malaysia</option>
+                        <option value="Maldives">Maldives</option><option value="Mali">Mali</option><option value="Marshall Islands">Marshall Islands</option><option value="Martinique">Martinique</option><option value="Mauritania">Mauritania</option>
+                        <option value="Mauritius">Mauritius</option><option value="Mayotte">Mayotte</option><option value="Mexico">Mexico</option><option value="Micronesia">Micronesia</option><option value="Monaco">Monaco</option>
+                        <option value="Mongolia">Mongolia</option><option value="Montserrat">Montserrat</option><option value="Morocco">Morocco</option><option value="Mozambique">Mozambique</option><option value="Myanmar">Myanmar</option>
+                        <option value="Namibia">Namibia</option><option value="Nauru">Nauru</option><option value="Nepal">Nepal</option><option value="New Caledonia">New Caledonia</option><option value="New Zealand">New Zealand</option>
+                        <option value="Nicaragua">Nicaragua</option><option value="Niger">Niger</option><option value="Nigeria">Nigeria</option><option value="Niue">Niue</option><option value="Norfolk Island">Norfolk Island</option>
+                        <option value="Northern Marianas">Northern Marianas</option><option value="Oman">Oman</option><option value="Pakistan">Pakistan</option><option value="Palau">Palau</option>
+                        <option value="Palestinian Territory">Palestinian Territory</option><option value="Panama">Panama</option><option value="Papua New Guinea">Papua New Guinea</option><option value="Paraguay">Paraguay</option>
+                        <option value="Peru">Peru</option><option value="Philippines">Philippines</option><option value="Pitcairn Islands">Pitcairn Islands</option><option value="Puerto Rico">Puerto Rico</option><option value="Qatar">Qatar</option>
+                        <option value="Republic of the Congo">Republic of the Congo</option><option value="Réunion">Réunion</option><option value="Rwanda">Rwanda</option><option value="Saint-Barthélemy">Saint-Barthélemy</option>
+                        <option value="Saint-Martin">Saint-Martin</option><option value="Saint-Pierre and Miquelon">Saint-Pierre and Miquelon</option><option value="Samoa">Samoa</option><option value="San Marino">San Marino</option>
+                        <option value="São Tomé and Príncipe">São Tomé and Príncipe</option><option value="Saudi Arabia">Saudi Arabia</option><option value="Senegal">Senegal</option><option value="Seychelles">Seychelles</option>
+                        <option value="Sierra Leone">Sierra Leone</option><option value="Singapore">Singapore</option><option value="Solomon Islands">Solomon Islands</option><option value="Somalia">Somalia</option>
+                        <option value="South Africa">South Africa</option><option value="South Georgia and the South Sandwich Islands">South Georgia and the South Sandwich Islands</option><option value="Sri Lanka">Sri Lanka</option>
+                        <option value="St. Helena">St. Helena</option><option value="St. Kitts and Nevis">St. Kitts and Nevis</option><option value="St. Lucia">St. Lucia</option><option value="St. Vincent and the Grenadines">St. Vincent and the Grenadines</option>
+                        <option value="Sudan">Sudan</option><option value="Suriname">Suriname</option><option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option><option value="Swaziland">Swaziland</option>
+                        <option value="Syrian, Arab Republic">Syrian, Arab Republic</option><option value="Taiwan">Taiwan</option><option value="Tajikistan">Tajikistan</option><option value="Tanzania, United Republic">Tanzania, United Republic</option>
+                        <option value="Thailand">Thailand</option><option value="Timor-Leste">Timor-Leste</option><option value="Togo">Togo</option><option value="Tokelau">Tokelau</option><option value="Tonga">Tonga</option>
+                        <option value="Trinidad and Tobago">Trinidad and Tobago</option><option value="Tunisia">Tunisia</option><option value="Turkmenistan">Turkmenistan</option><option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+                        <option value="Tuvalu">Tuvalu</option><option value="Uganda">Uganda</option><option value="United Arab Emirates">United Arab Emirates</option><option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
+                        <option value="United States of America">United States of America</option><option value="United States Virgin Islands">United States Virgin Islands</option><option value="Uruguay">Uruguay</option>
+                        <option value="Uzbekistan">Uzbekistan</option><option value="Vanuatu">Vanuatu</option><option value="Vatican City">Vatican City</option><option value="Venezuela">Venezuela</option><option value="Vietnam">Vietnam</option>
+                        <option value="Wallis and Futuna">Wallis and Futuna</option><option value="Western Sahara">Western Sahara</option><option value="Yemen">Yemen</option><option value="Zambia">Zambia</option><option value="Zimbabwe">Zimbabwe</option>
+                    </select>
+                </div>
+                <label class="control-label col-sm-1">TU-ID</label>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control input-sm" name="res2_tuid" placeholder="Enter your TU-ID">
+                </div>
+
+            </div>
+            <div class="form-group row">
+                <label class="control-label col-sm-6"> If you want to use certificates for login, enter the distinguished name of the researcher here</label>
+                <div class="col-sm-3">
+                    <input type="text" class="form-control input-sm" name="res2_cert" placeholder="-- If you want to use certificates for login, enter the distinguished name of the researcher here --">
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" name="res2_lichtacc"> Lichtenberg Account exits?</label>
+                </div>
+            </div>
+            <p>If the fields above are not sufficient, you can add further researchers here:</p>
+            <div class="form-group">
+                <div class="col-sm-6">
+                    <textarea name="Abstract" class="form-control" rows="2" cols="70" name="res2_data"></textarea>
+                </div>
+            </div>
+            <h4>1.5 Project Partners</h4>
+            <div class="span5"></div>
+            <p>If project partners from outside the proposing institute are involved, please list them here. Project partners will not be granted access to the Lichtenberg computer unless you specify them as "Researchers" (in section 1.3), too.</p>
+            <div class="form-group row">
+                <label class="control-label col-sm-3">Title:</label>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control input-sm" name="pp_title" placeholder="">
+                </div>
+                <label class="control-label col-sm-2">Name of Institute:</label>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control input-sm" name="pp_inst" placeholder="">
+                </div>
+
+            </div>
+            <div class="form-group row">
+                <label class="control-label col-sm-3">Last Name:</label>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control input-sm" name="pp_lname" placeholder="">
+                </div>
+                <label class="control-label col-sm-2">First Name:</label>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control input-sm" name="pp_fname" placeholder="">
+                </div>
+
+            </div>
+            <div class="form-group row">
+                <label class="control-label col-sm-3">Street:</label>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control input-sm" name="pp_street" placeholder="">
+                </div>
+                <label class="control-label col-sm-2">Postal code & City:</label>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control input-sm" name="pp_pcc" placeholder="">
+                </div>
+
+            </div>
+            <div class="form-group row">
+                <label class="control-label col-sm-3">Email:</label>
+                <div class="col-sm-2">
+                    <input type="email" class="form-control input-sm" name="pp_email" placeholder="">
+                </div>
+                <label class="control-label col-sm-2">Phone:</label>
+                <div class="col-sm-2">
+                    <input type="number" class="form-control input-sm" name="pp_phone" placeholder="">
+                </div>
+
+            </div>
+            <div class="form-group row">
+                <div class="checkbox">
+                    <label class="control-label col-sm-5"><input type="checkbox" name="pp_tuid"> TU-ID exits?</label>
+                    <label class="control-label col-sm-4"><input type="checkbox" name="pp_acc"> Lichtenberg Account exits?</label>
+                </div>
+
+
+            </div>
+            <p>If the fields above are not sufficient, you can add further entries here:</p>
+            <div class="form-group">
+                <div class="col-sm-6">
+                    <textarea  class="form-control" rows="2" cols="70" name="pp_data"></textarea>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class=" col-sm-10">
+                    <button type="submit" class="btn btn-primary">Submit data to HRZ</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div> <!--End of Main Container-->
+
+
+
+
+
+</body>
+</html>
