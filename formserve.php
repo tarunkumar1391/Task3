@@ -31,6 +31,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     //1.Administrative Details
     $proj_title = isset($_POST['proj_title']) ? $_POST['proj_title'] : "0";
     echo "<p>The  title is $proj_title</p>";
+    file_put_contents("./data/proj_title.txt", $proj_title . "\n", FILE_APPEND);
 
     $prop_inst = isset($_POST['prop_inst']) ? $_POST['prop_inst'] : "0";
     echo "<p>The proposing institution is $prop_inst</p>";
@@ -82,7 +83,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 
 $stmt->close();
 $conn->close();
-
+exit();
 ?>
 </body>
 </html>
