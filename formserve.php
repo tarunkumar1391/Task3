@@ -28,10 +28,15 @@ $stmt = $conn->prepare("INSERT INTO formgen (proj_title,prop_inst,dir_title,dir_
 
 
 if($_SERVER['REQUEST_METHOD'] == "POST"){
+    $tempdir = '/home/tarun/Documents/HIWI/Task3/data';
     //1.Administrative Details
     $proj_title = isset($_POST['proj_title']) ? $_POST['proj_title'] : "0";
     echo "<p>The  title is $proj_title</p>";
-    file_put_contents("./data/proj_title.txt", $proj_title . "\n", FILE_APPEND);
+    $file1 = tempnam($tempdir, time().'-').'txt';
+    if( file_exists($file1)){
+        unlink($file1);
+    }
+    mkdir($file1,0777,true);
 
     $prop_inst = isset($_POST['prop_inst']) ? $_POST['prop_inst'] : "0";
     echo "<p>The proposing institution is $prop_inst</p>";
@@ -83,7 +88,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 
 $stmt->close();
 $conn->close();
-exit();
+
 ?>
 </body>
 </html>
