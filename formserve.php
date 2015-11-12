@@ -28,23 +28,26 @@ $stmt = $conn->prepare("INSERT INTO formgen (proj_title,prop_inst,dir_title,dir_
 
 
 if($_SERVER['REQUEST_METHOD'] == "POST"){
-    $tempdir = '/home/tarun/Documents/HIWI/Task3/data';
-    //1.Administrative Details
-    $proj_title = isset($_POST['proj_title']) ? $_POST['proj_title'] : "0";
-    echo "<p>The  title is $proj_title</p>";
-    $file1 = tempnam($tempdir, time().'-').'txt';
+    $path = '/home/tarun/Documents/HIWI/Task3/data';
+    $file1 = tempnam($path, time().'-');
     if( file_exists($file1)){
         unlink($file1);
     }
-    mkdir($file1,0777,true);
+    mkdir($file1,0777,true); //generates a dir with a random name
+    //1.Administrative Details
+    $proj_title = isset($_POST['proj_title']) ? $_POST['proj_title'] : "0";
+    echo "<p>The  title is $proj_title</p>";
+    file_put_contents($file1 ."/proj_title.txt",$proj_title,FILE_APPEND); //file is created inside the random dir with the name specified by admin
 
     $prop_inst = isset($_POST['prop_inst']) ? $_POST['prop_inst'] : "0";
     echo "<p>The proposing institution is $prop_inst</p>";
+    file_put_contents($file1 ."/prop_inst.txt",$proj_title,FILE_APPEND);
 
 //code for proposing state yet to come (2 input fields, one from dropdown and one to specify if the state wasn't present in the list
 
     $dir_title = isset($_POST['dir_title']) ? $_POST['dir_title'] : "0";
     echo "<p>The title is $dir_title </p>";
+    file_put_contents($file1 ."/dir_title.txt",$proj_title,FILE_APPEND);
 
     $dir_lname = isset($_POST['dir_lname']) ? $_POST['dir_lname'] : "0";
     echo "<p>The lastname is $dir_lname </p>";
