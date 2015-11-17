@@ -6,6 +6,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="functions.js"></script>
     <link href="pagedecor.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -47,7 +48,7 @@
             <div class="form-group">
                 <label class="control-label col-sm-3">Federal state of the Proposing Institution:</label>
                 <div class="col-sm-3">
-                    <select class="form-control" name="prop_state">
+                    <select class="form-control" name="prop_state" onclick="pstate()" id="prop_st">
                         <option>-- Please select--</option><option value="Baden-Württemberg">Baden-Württemberg</option>
                         <option value="Bayern">Bayern</option> <option value="Berlin">Berlin</option>
                         <option value="Brandenburg">Brandenburg</option> <option value="Bremen">Bremen</option>
@@ -59,10 +60,10 @@
                     </select>
                 </div>
             </div>
-            <div class="form-group">
+            <div class="form-group" id="prop_st_other" style="display: none;">
                 <label class="control-label col-sm-3" >If not in the list, Please specify:</label>
                 <div class="col-sm-3">
-                    <input type="text" class="form-control input-sm" name="prop_state_other" placeholder="">
+                    <input type="text" class="form-control input-sm" name="prop_state"  placeholder="">
                 </div>
             </div>
             <h4>1.1 Director of the Institution</h4>
